@@ -1,0 +1,75 @@
+.contact-headline{
+  .fs32;
+margin-bottom: 20px;
+}
+.contact-form{
+  margin: 35px auto;
+  max-width: 760px;
+
+  select{
+    width: 100%;
+    background: none;
+    height: 46px;
+    outline: none;
+    padding: 0 10px;
+    .fs18;
+    &.error{
+      border-color: @brand-orange;
+    }
+    &.valid{
+      border-color: @brand-success;
+    }
+  }
+}
+.input-tr{
+  background: none;
+}
+.select-std .btn-default{
+  background-color: transparent;
+  height: 46px;
+  border-radius: 0;
+  border-color: @border-color;
+  outline: none!important;
+}
+.select-std .dropdown-menu{
+  background-color: #efefef;
+}
+.contact-textarea.form-control{
+  height: 155px;
+  background: #efefef;
+  -webkit-border-radius:0;
+  -moz-border-radius:0;
+  border-radius:0;
+}
+.contact-block{
+  margin-bottom: 30px;
+}
+.bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn){
+  width:100%;
+}
+.bootstrap-select .dropdown-toggle:focus,
+.dropdown-menu > .active > a, .dropdown-menu > .active > a:focus, .dropdown-menu > .active > a:hover,
+.dropdown-menu > li > a:focus, .dropdown-menu > li > a:hover{
+  outline: none!important;
+}
+.bootstrap-select.btn-group .dropdown-toggle .filter-option{
+  font-size: 18px;
+  line-height: 1.33333;
+  color: #000000;
+  text-align: right;
+}
+.bootstrap-select.btn-group .dropdown-toggle .caret{
+  left: 20px;
+  right: auto;
+}
+
+.bootstrap-select > .dropdown-toggle{
+  padding-right: 10px;
+}
+.bootstrap-select.btn-group .dropdown-menu li.disabled a{
+  cursor: text;
+}
+
+.form-control{
+  border-color: @border-color;
+}

@@ -1,0 +1,207 @@
+//Main Vars
+@base-url:     "../images";
+@brand-dark: #000000;
+@brand-orange: #f78225;
+@brand-success: #68ac44;
+@brand-danger: #9a3d3d;
+@border-color: #cecdcd;
+@border-news-color: #b1b1b1;
+@item-bg: #bd6445;
+@icon-color: #81b385;
+//Mixins
+.font(@fontName,@fontFile) {
+    @font-face	{
+        font-family: "@{fontName}";
+        src: url("../fonts/@{fontFile}/@{fontName}.eot");
+        src: url("../fonts/@{fontFile}/@{fontName}.eot?#iefix") format("embedded-opentype"),
+            url("../fonts/@{fontFile}/@{fontName}.woff") format("woff"),
+            url("../fonts/@{fontFile}/@{fontName}.ttf") format("truetype"),
+            url("../fonts/@{fontFile}/@{fontName}.svg#svgFontName") format("svg");
+    }
+}
+.font(OpenSansHebrew-Bold,opensanshebrew);
+.font(OpenSansHebrew-Regular,opensanshebrew);
+.font(OpenSansHebrew-Light,opensanshebrew);
+.font(OpensansHebrew-Extrabold,opensanshebrew);
+
+.font(Rubik-Light,rubik);
+::selection {
+    background: @brand-orange;
+    color: #fff;
+}
+::-moz-selection {
+    background: @brand-orange;
+    color: #fff;
+}
+button, a{
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+button,label{
+    cursor: pointer;
+    outline: 0 none;
+}
+.btn.active.focus, .btn.active:focus, .btn.focus,
+.btn:active.focus, .btn:active:focus, .btn:focus{
+    outline: 0 none!important;
+}
+textarea{
+    resize: none;
+    overflow: auto;
+}
+input, button, textarea{
+    outline: 0 none!important;
+    box-shadow: none!important;
+}
+.inlinePos(@display,@vertAlign){
+    display:@display;
+    vertical-align:@vertAlign;
+}
+.transition(@prop, @duration, @type){
+    -webkit-transition: @prop @duration @type;
+    -moz-transition: @prop @duration @type;
+    -o-transition: @prop @duration @type;
+    transition: @prop @duration @type;
+}
+.navbar-brand {
+    float: right;
+}
+//Table
+.table-bordered{
+    border: 0 none;
+}
+.table-bordered>tbody>tr>td:first-child,
+.table-bordered>thead>tr>th:first-child{
+    border-right:0 none;
+}
+.table-bordered>tbody>tr>td:last-child,
+.table-bordered>thead>tr>th:last-child{
+    border-left:0 none;
+}
+.table-bordered>tbody>tr:last-child{
+    td{
+        border-bottom: 0 none;
+    }
+}
+
+//Extends
+.BoldExtend{
+    font-family: OpenSansHebrew-Bold, sans-serif;
+}
+.RegExtend{
+    font-family: OpenSansHebrew-Regular, sans-serif;
+}
+.LightExtend{
+    font-family: OpenSansHebrew-Light, sans-serif;
+}
+.ExBoldExtend{
+    font-family: OpensansHebrew-Extrabold, sans-serif;
+}
+.ExtendHeadlineOr{
+    color: @brand-orange;
+}
+//Inputs
+.valid .form-control,.valid .bootstrap-select .dropdown-toggle, .valid .bootstrap-select .dropdown-toggle{
+    border-color: @brand-success;
+}
+.error .form-control,.error .bootstrap-select .dropdown-toggle, .has-error .bootstrap-select .dropdown-toggle{
+    border-color: @brand-orange;
+}
+label.error{
+    font-size: 10px;
+    line-height: 10px;
+    color: @brand-orange;
+    position: absolute;
+    right: 0;
+    bottom: -18px;
+}
+
+//Grid
+.no-padding{
+    padding-left:0;
+    padding-right:0;
+}
+.no-padding-right{
+    padding-right:0;
+}
+.no-margin{
+    margin: 0!important;
+}
+//Fonts
+.fs16 { font-size: 1rem; }
+.fs18 { font-size: 1.125rem; }
+.fs19 { font-size: 1.188rem; }
+.fs20 { font-size: 1.250rem; }
+.fs21 { font-size: 1.313rem; }
+.fs22 { font-size: 1.375rem; }
+.fs23 { font-size: 1.438rem; }
+.fs24 { font-size: 1.500rem; }
+.fs25 { font-size: 1.563rem; }
+.fs26 { font-size: 1.625rem; }
+.fs27 { font-size: 1.688rem; }
+.fs28 { font-size: 1.750rem; }
+.fs29 { font-size: 1.813rem; }
+.fs30 { font-size: 1.875rem; }
+.fs31 { font-size: 1.938rem; }
+.fs32 { font-size: 2.000rem; }
+.fs33 { font-size: 2.063rem; }
+.fs34 { font-size: 2.125rem; }
+.fs35 { font-size: 2.188rem; }
+.fs36 { font-size: 2.250rem; }
+.fs37 { font-size: 2.313rem; }
+.fs38 { font-size: 2.375rem; }
+.fs39 { font-size: 2.438rem; }
+.fs40 { font-size: 2.500rem; }
+.fs41 { font-size: 2.563rem; }
+.fs42 { font-size: 2.625rem; }
+.fs43 { font-size: 2.688rem; }
+.fs44 { font-size: 2.750rem; }
+.fs45 { font-size: 2.813rem; }
+.fs46 { font-size: 2.875rem; }
+.fs47 { font-size: 2.938rem; }
+.fs48 { font-size: 3.000rem; }
+.fs49 { font-size: 3.063rem; }
+.fs50 { font-size: 3.125rem; }
+.fs51 { font-size: 3.188rem; }
+.fs52 { font-size: 3.250rem; }
+.fs53 { font-size: 3.313rem; }
+.fs54 { font-size: 3.375rem; }
+.fs55 { font-size: 3.438rem; }
+.fs56 { font-size: 3.500rem; }
+.fs57 { font-size: 3.563rem; }
+.fs58 { font-size: 3.625rem; }
+.fs59 { font-size: 3.688rem; }
+.fs60 { font-size: 3.750rem; }
+.fs61 { font-size: 3.813rem; }
+.fs62 { font-size: 3.875rem; }
+.fs63 { font-size: 3.938rem; }
+.fs64 { font-size: 4.000rem; }
+.fs65 { font-size: 4.063rem; }
+.fs66 { font-size: 4.125rem; }
+.fs67 { font-size: 4.188rem; }
+.fs68 { font-size: 4.250rem; }
+.fs69 { font-size: 4.313rem; }
+.fs70 { font-size: 4.375rem; }
+.fs72 { font-size: 4.500rem; }
+.fs75 { font-size: 4.688rem; }
+.fs85 { font-size: 5.313rem; }
+.fs90 { font-size: 5.625rem; }
+.fs100 { font-size: 6.250rem; }
+.fs119 { font-size: 7.438rem; }
+
+.txt-light{
+    &:extend(.LightExtend);
+}
+    //Justified nav
+.nav-justified>li, .nav-tabs.nav-justified>li {
+    display: table-cell;
+    width: 1%;
+}
+
+.form-control:focus {
+    border-color: @brand-success;
+    outline: 0;
+    box-shadow: none;
+}
